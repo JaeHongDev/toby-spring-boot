@@ -1,5 +1,8 @@
 package config.autoconfig;
 
+import config.MyConfigurationProperties;
+
+@MyConfigurationProperties(prefix = "server")
 public class ServerProperties {
 
     private int port;
