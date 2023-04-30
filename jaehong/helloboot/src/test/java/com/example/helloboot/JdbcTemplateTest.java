@@ -5,9 +5,11 @@ import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.boot.test.context.SpringBootTest.WebEnvironment;
 import org.springframework.jdbc.core.JdbcTemplate;
 
-@HellobootTest
+@SpringBootTest(webEnvironment = WebEnvironment.NONE)
 public class JdbcTemplateTest {
     @Autowired
     JdbcTemplate jdbcTemplate;
