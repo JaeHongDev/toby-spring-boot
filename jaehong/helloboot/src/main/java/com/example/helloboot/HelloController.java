@@ -3,6 +3,7 @@ package com.example.helloboot;
 
 import java.util.LinkedList;
 import java.util.Queue;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -23,5 +24,10 @@ public class HelloController {
             throw new IllegalArgumentException();
         }
         return helloService.sayHello(name);
+    }
+
+    @GetMapping("/count")
+    public String count(String name) {
+        return name + ": " + helloService.countOf(name);
     }
 }
